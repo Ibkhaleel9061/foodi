@@ -1,0 +1,61 @@
+
+
+// Screen splash code -> Home Page
+class screensplash extends StatefulWidget {
+  const screensplash({super.key});
+
+  @override
+  State<screensplash> createState() => _screensplashState();
+}
+
+class _screensplashState extends State<screensplash> {
+  @override
+  void initState() {
+    screenPage();
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+  }
+
+  //splah screen.......................
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // screen splash icon
+      body: Center(
+          child: Image.asset(
+        'assets/image/foodi.jpg',
+        height: 1000,
+      )),
+    );
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  // splah screen API Home Page
+  Future<void> screenPage() async {
+    await Future.delayed(const Duration(seconds: 5));
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+      return const loging();
+    }));
+  }
+}
+
+
+
+
+
+
+
+
+
+run edd............
